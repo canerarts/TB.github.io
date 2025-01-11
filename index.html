@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANERARTS PROJECT</title>
+    <style>
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Siyah arka plan */
+    position: relative; /* Body içinde mutlak pozisyonlu elementlerin yerleşebilmesi için */
+    height: 100vh; /* Sayfanın yüksekliği ekran kadar olur */
+}
+
+/* Resim Overlay (Opaklık) Katmanı */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('JON.jpg'); /* Fitness-related image */
+    background-size: 50%; /* Resmi %50 boyutunda küçültür */
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.4; /* Opaklık %40 */
+    z-index: -1; /* İçeriğin altında görünecek şekilde */
+}
+
+
+
+
+
+
+
+
+
+
+        
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo img {
+            height: 85px;
+            object-fit: contain;
+            background: transparent;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 17px;
+            margin: 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #e60000;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background-image: url('JON.png'); /* Fitness-related image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        /* Animasyon */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Fitness Odaklı Bütün Bölümler */
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #1e1e1e;
+        }
+
+        .section h2 {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .section p {
+            font-size: 20px;
+            color: #a5a5a5;
+        }
+
+        .section .cta-button {
+            text-decoration: none;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #e60000;
+            color: white;
+            font-size: 18px;
+             font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background-color 0.3s ease;
+        }
+
+        .section .cta-button:hover {
+            background-color: #ff3300;
+        }
+
+        /* Featured Workouts Section */
+        .featured-workouts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .workout-item {
+            background-color: #2e2e2e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .workout-item img {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .workout-item h3 {
+            font-size: 22px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .workout-item p {
+            color: #a5a5a5;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .workout-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            color: black;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="TOP BOY'S.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#workouts">Workouts</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div>
+                <h1>Unleash Your Strength</h1>
+                <p>Fitness for every body, every day</p>
+            </div>
+        </section>
+
+        <!-- Fitness Section 1 -->
+        <section class="section">
+            <h2>Maximize Your Potential</h2>
+            <p>Listen To Our List To Print More Smooth And Stronger.</p>
+            <a href="https://open.spotify.com/playlist/3oooVJRLIVMOEHXlHaoS9v?go=1&sp_cid=b6d64c7d6959f3c9c9eeeb6981fd5974&utm_source=embed_player_p&utm_medium=desktop&nd=1&dlsi=30691e4984194acb" class="cta-button" target="_blank">Explore Now</a>
+        </section>
+
+        <!-- Featured Workouts -->
+        <section id="workouts" class="section">
+            <h2>Featured Workouts</h2>
+            <div class="featured-workouts">
+                <div class="workout-item">
+                    <img src="1.jpg" alt="Workout 1">
+                    <h3>Strength Training</h3>
+                    <p>Build muscle and improve endurance with our tailored strength routines</p>
+                </div>
+                <div class="workout-item">
+                    <img src="2.jpg" alt="Workout 2">
+                    <h3>Cardio Workouts</h3>
+                    <p>Get your heart pumping and boost your stamina with high-intensity training</p>
+                </div>
+                <div class="workout-item">
+                    <img src="3.jpg" alt="Workout 3">
+                    <h3>Flexibility and Mobility</h3>
+                    <p>Enhance your movement and prevent injuries with stretching and mobility exercises</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fitness Section 2 -->
+        <section class="section">
+            <h2>Fuel Your Workout</h2>
+            <p>Our fitness tips and nutrition guides help you stay energized and achieve your fitness goals</p>
+            <a href="https://www.instagram.com/ccanerakdag/" class="cta-button" target="_blank">Meet Us</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>FOUNDER / CANERARTS</p>
+    </footer>
+</body>
+</html>
